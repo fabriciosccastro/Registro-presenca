@@ -9,7 +9,12 @@ import pandas as pd
 from datetime import datetime
 
 # Caminho dos arquivos
-caminho_base = 'C:/Users/USUARIO/Downloads/'
+caminho_base = 'https://raw.githubusercontent.com/fabriciosccastro/Registro-presenca/main/'
+
+# Agora, você pode usar o caminho correto para carregar os arquivos:
+estrutura_df = pd.read_excel(caminho_base + 'Estrutura.xlsx', engine='openpyxl')
+usuarios_df = pd.read_excel(caminho_base + 'Usuarios.xlsx', engine='openpyxl')
+
 
 # Carregar os dados
 @st.cache_data
